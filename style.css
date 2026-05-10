@@ -1,0 +1,121 @@
+body{
+    background-color: antiquewhite;
+}
+
+*{
+    margin: 0;
+    padding: 0%;
+}
+
+nav{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+.container{
+    min-height: 70vh;
+    background-color: black;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    margin: 23px auto;
+    width: 60%;
+    padding: 50px;
+    background-image: url('ariana4.jpg'); 
+    background-repeat: no-repeat;
+    background-position: right ;
+    background-size: cover;
+    border-radius: 15px;
+
+}
+
+.logo img{
+    width: 2rem;
+    height: 2rem;
+    padding: 0 10px;
+}
+
+nav ul li{
+    padding: 0 12px;
+}
+nav ul{
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    height: 70px;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    font-weight: bolder;
+    size: 4 rem;
+}
+
+.bottom{
+    position: sticky;
+    background-color: black;
+    color: white;
+    height: 100px;
+    align-items: center;
+    display: flex;
+    bottom: 0;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 10;
+}
+
+.icons{
+    margin: 14px;
+    z-index: 20;
+}
+
+.ini{
+    cursor: pointer;
+}
+
+#bar{
+    width: 100vh;
+    cursor: pointer;
+}
+
+.songItem{
+    height: 52px;
+    display: flex;
+    background-color: white;
+    color: black;
+    width: 56vh;
+    margin: 13px 0;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.songItem img{
+    width: 50px;
+    margin: 0 10px;
+    border-radius: 15px;
+}
+
+.timestamp{
+    margin: 0 10px;
+    display: flex;
+    align-items: center;
+}
+
+.songItemContainer{
+    margin-top: 50px;
+}
+ 
+.songInfo{
+    position:absolute;
+    left: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.songInfo img{
+    opacity: 0;
+    transition: opacity is ease-in;
+}
