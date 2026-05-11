@@ -6,18 +6,24 @@ let audioElement = new Audio('songs/Side To Side.mp3');
 let masterPlay = document.getElementById('masterPlay');
 let bar = document.getElementById('bar');
 let gif = document.getElementById('gif');
+let songItems = Array.from(document.getElementsByClassName('songItem'));
 
 let songs = [
-    {songName: "Side To Side", filePath: "songs/Side To Side.mp3"},
-    {songName: "Into You", filePath: "songs/Into You.mp3"},
-    {songName: "Everyday", filePath: "songs/Everyday.mp3"},
-    {songName: "Dangerous Woman", filePath: "songs/Dangerous Woman.mp3"},
-    {songName: "Moonlight", filePath: "songs/Moonlight.mp3"},
-    {songName: "Be Alright", filePath: "songs/Be Alright.mp3"},
-    {songName: "Let Me Love You", filePath: "songs/Let Me Love You.mp3"},
-    {songName: "I Don't Care", filePath: "songs/I Don't Care.mp3"},
-    {songName: "Thinking Bout You", filePath: "songs/Thinking Bout You.mp3"}
+    {songName: "Side To Side", filePath: "songs/Side To Side.mp3", coverPath: "cover1.jpg"},
+    {songName: "Into You", filePath: "songs/Into You.mp3", coverPath: "cover1.jpg"},
+    {songName: "Everyday", filePath: "songs/Everyday.mp3", coverPath: "cover1.jpg"},
+    {songName: "Dangerous Woman", filePath: "songs/Dangerous Woman.mp3", coverPath: "cover1.jpg"},
+    {songName: "Moonlight", filePath: "songs/Moonlight.mp3", coverPath: "cover1.jpg"},
+    {songName: "Be Alright", filePath: "songs/Be Alright.mp3", coverPath: "cover1.jpg"},
+    {songName: "Let Me Love You", filePath: "songs/Let Me Love You.mp3", coverPath: "cover1.jpg"},
+    {songName: "I Don't Care", filePath: "songs/I Don't Care.mp3", coverPath: "cover1.jpg"},
+    {songName: "Thinking Bout You", filePath: "songs/Thinking Bout You.mp3", coverPath: "cover1.jpg"}
 ]
+
+songItems.forEach((element,i)=>{
+    element.getElementsByTagName("img")[0].src = songs[i].coverPath;
+    element.getElementsByClassName("songName")[0].innerText = songs[i].songName;
+})
 
 //audioElement.play();
 
@@ -60,3 +66,21 @@ bar.addEventListener('change', ()=>{
     audioElement.currentTime = (bar.value * audioElement.duration)/100;
 });
 
+
+
+document.querySelector('.songItemContainer').addEventListener('click', (e) => {
+    Clicked = e.target.closest('.songPlay'); 
+    if (Clicked) { 
+        let allPlays = Array.from(document.getElementsByClassName('songPlay'));
+        let index = allPlays.indexOf(e.target.closest('.songPlay'));
+        
+        console.log("Song index", index);
+        console.log("song name", songs[index].songName);
+
+        audioElement.src = songs[index].filePath;
+        audioElement.currentTime = 0;
+        audioElement.play();
+        masterPlay.className = "ini fa-solid fa-2x fa-circle-pause";
+        gif.style.opacity = 1;
+    }
+});
