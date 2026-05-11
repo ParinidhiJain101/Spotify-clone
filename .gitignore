@@ -1,2 +1,9 @@
 node_modules
 .env
+# Songs (copyright)
+songs/
+*.mp3
+
+# Specific copyrighted images only
+cover1.jpg
+ariana4.jpg

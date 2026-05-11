@@ -56,7 +56,6 @@ document.querySelector('.icons').addEventListener('click', (e)=>{
 
 //listener
 audioElement.addEventListener('timeupdate', ()=>{
-    console.log('timeupdate');
     //update seekbar
     progress= parseInt((audioElement.currentTime/audioElement.duration)*100);
     bar.value=progress;
