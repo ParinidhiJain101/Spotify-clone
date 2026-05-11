@@ -6,6 +6,7 @@
     <title>Spotify</title>
     <link rel="icon" href="data:,">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
     <nav>
@@ -110,18 +111,17 @@
     <div class="bottom">
         <input type="range" name="range" id="bar" min="0" value="0" max="100">
         <div class="icons">
-            <i class="ini fa-solid fa-shuffle"></i>
-            <i class="ini fa-solid fa-2x fa-backward-step"></i>
+            <i id="shuffle" class="ini fa-solid fa-shuffle"></i>
+            <i id="previous" class="ini fa-solid fa-2x fa-backward-step"></i>
             <i id="masterPlay" class="ini fa-solid fa-2x fa-circle-play"></i>
-            <i class="ini fa-solid fa-2x fa-forward-step"></i>
-            <i class="ini fa-solid fa-repeat"></i>
+            <i id="forward" class="ini fa-solid fa-2x fa-forward-step"></i>
+            <i id="repeat" class="ini fa-solid fa-repeat"></i>
         </div>
         <div class="songInfo">
-            <img class="play" src="MusicSoundEqualizer.gif" alt="" id="gif" >
-            Side To Side
+            <img class="play" src="MusicSoundEqualizer.gif" alt="" id="gif">
+            <span id="songNameB">Side To Side</span>
         </div>
     </div>
-    <script src="https://kit.fontawesome.com/5842ce4ea6.js" crossorigin="anonymous"></script>
     <script src="/script.js"></script>
 </body>
 </html>
